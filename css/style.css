@@ -103,11 +103,11 @@
 }
 
 
-/*** Header ***/
+/* ** Header **
 #home {
     margin-bottom: 6rem;
     background: url(../img/bg-header.png) left top no-repeat;
-}
+} */
 
 .typed-cursor {
     font-size: 30px;
