@@ -103,12 +103,12 @@
 }
 
 
-/* ** Header **
+** Header **
 #home {
     margin-bottom: 6rem;
     text-size-adjust: auto;
     background: url(../img/profile.png) left top no-repeat;
-} */
+}
 
 .typed-cursor {
     font-size: 30px;
