@@ -759,6 +759,15 @@ section {
 .services .icon-box:hover .title a {
   color: #ffb727;
 }
+.hire-button {
+  background-color:#ffb727; /* Set the background color to yellow */
+  color: #000; /* Set the text color to black, you can adjust this based on your design */
+  padding: 10px 20px; /* Adjust the padding as needed */
+  text-decoration: none; /* Remove default link underline */
+  display: inline-block; /* Make the link behave like a block element */
+  border-radius: 5px; /* Add rounded corners for a nice look */
+}
+
 
 /*--------------------------------------------------------------
 # Testimonials
