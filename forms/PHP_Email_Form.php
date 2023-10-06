@@ -16,28 +16,22 @@ class PHP_Email_Form
     }
 
     public function send()
-{
-    $headers = 'From: ' . $this->from_name . ' <' . $this->from_email . '>' . "\r\n" .
-        'Reply-To: ' . $this->from_email . "\r\n" .
-        'X-Mailer: PHP/' . phpversion();
+    {
+        $headers = 'From: ' . $this->from_name . ' <' . $this->from_email . '>' . "\r\n" .
+            'Reply-To: ' . $this->from_email . "\r\n" .
+            'X-Mailer: PHP/' . phpversion();
 
-    $message = '';
-    foreach ($this->message as $m) {
-        $message .= $m['label'] . ": " . $m['content'] . "\n";
+        $message = '';
+        foreach ($this->message as $m) {
+            $message .= $m['label'] . ": " . $m['content'] . "\n";
+        }
+
+        $mail_success = mail($this->to, $this->subject, $message, $headers);
+
+        if ($mail_success) {
+            return json_encode(array('success' => true, 'message' => 'Your message has been sent. Thank you!'));
+        } else {
+            return json_encode(array('success' => false, 'message' => 'Failed to send the message. Please try again later.'));
+        }
     }
-
-    // Additional headers for better email handling (optional)
-    $headers .= "MIME-Version: 1.0" . "\r\n";
-    $headers .= "Content-type:text/plain;charset=UTF-8" . "\r\n";
-
-    // Send email
-    $mail_success = mail($this->to, $this->subject, $message, $headers);
-
-    if ($mail_success) {
-        return json_encode(array('success' => true, 'message' => 'Email sent successfully.'));
-    } else {
-        return json_encode(array('success' => false, 'message' => 'Failed to send email.'));
-    }
-}
-
 }
