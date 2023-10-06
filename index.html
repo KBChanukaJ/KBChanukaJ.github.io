@@ -575,10 +575,12 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Include jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
   <!-- AJAX Script -->
 <script>
@@ -587,12 +589,14 @@
           e.preventDefault();
   
           var formData = $(this).serialize();
+          console.log(formData); // Log form data to console for debugging
   
           $.ajax({
               type: "POST",
-              url: "forms/contact.php",
+              url: "forms/contact.php", // Update with your actual path
               data: formData,
               success: function(response) {
+                  console.log(response);
                   var result = JSON.parse(response);
                   if (result.success) {
                       $(".sent-message").text(result.message);
@@ -602,7 +606,8 @@
                       $(".sent-message").text("");
                   }
               },
-              error: function() {
+              error: function(error) {
+                  console.error('Error:', error);
                   $(".error-message").text("Failed to submit the form. Please try again later.");
                   $(".sent-message").text("");
               }
