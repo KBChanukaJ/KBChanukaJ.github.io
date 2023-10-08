@@ -509,7 +509,7 @@
           </div>
 
           <div class="col-lg-6">
-            <form id="contact-form" action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form id="contact-form" onsubmit="submitForm(event)" method="post" role="form" class="php-email-form">
                 <div class="row">
                     <div class="col-md-6 form-group">
                         <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -518,9 +518,7 @@
                         <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
                     </div>
                 </div>
-                <div class="form-group mt-3">
-                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-                </div>
+                
                 <div class="form-group mt-3">
                     <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
                 </div>
@@ -580,41 +578,28 @@
   <script src="assets/js/main.js"></script>
 
   <!-- Include jQuery -->
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 
   <!-- AJAX Script -->
-<script>
-  $(document).ready(function() {
-      $("#contact-form").submit(function(e) {
-          e.preventDefault();
-  
-          var formData = $(this).serialize();
-          console.log(formData); // Log form data to console for debugging
-  
-          $.ajax({
-              type: "POST",
-              url: "forms/contact.php", // Update with your actual path
-              data: formData,
-              success: function(response) {
-                  console.log(response);
-                  var result = JSON.parse(response);
-                  if (result.success) {
-                      $(".sent-message").text(result.message);
-                      $(".error-message").text("");
-                  } else {
-                      $(".error-message").text(result.message);
-                      $(".sent-message").text("");
-                  }
-              },
-              error: function(error) {
-                  console.error('Error:', error);
-                  $(".error-message").text("Failed to submit the form. Please try again later.");
-                  $(".sent-message").text("");
-              }
-          });
-      });
-  });
-  </script>
+  <script type="text/javascript">
+    function submitForm(event){
+        event.preventDefault();
+        var formName = document.getElementById("contact-form");
+        var name = formName.elements["name"].value;
+        var email = formName.elements["email"].value;
+        var msg = formName.elements["message"].value;
+        var dataString = 'name='+ name + '&email='+ email + '&msg='+ msg;
+        $.ajax({
+            type:"POST",
+            url:"forms/contact.php",
+            data:dataString,
+            cache:false,
+            success: function(){
+                alert("Email Sent Successfully!");
+            }
+        });
+    }
+    </script>
 
 </body>
 
