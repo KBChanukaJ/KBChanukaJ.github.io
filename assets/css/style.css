@@ -361,6 +361,15 @@ h6 {
   text-transform: uppercase;
 }
 
+#hero h3 {
+  color: #eee;
+  margin-bottom: 50px;
+  font-family: "Satisfy", serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
 #hero .btn-scroll {
   transition: 0.4s;
   color: rgba(255, 255, 255, 0.6);
