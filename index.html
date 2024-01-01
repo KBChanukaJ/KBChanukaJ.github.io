@@ -497,7 +497,7 @@
           </div>
 
           <div class="col-lg-6">
-            <form id="contact-form" onsubmit="submitForm(event)" method="post" role="form" class="php-email-form">
+            <form id="contact-form" method="post" role="form" class="php-email-form" action="contact.php">
                 <div class="row">
                     <div class="col-md-6 form-group">
                         <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -506,7 +506,6 @@
                         <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
                     </div>
                 </div>
-                
                 <div class="form-group mt-3">
                     <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
                 </div>
@@ -518,6 +517,7 @@
                 <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
         </div>
+        
 
         </div>
 
@@ -588,6 +588,46 @@
         });
     }
     </script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+
+<!-- Client-side form validation -->
+<script>
+   const constraints = {
+       name: {
+           presence: { allowEmpty: false }
+       },
+       email: {
+           presence: { allowEmpty: false },
+           email: true
+       },
+       message: {
+           presence: { allowEmpty: false }
+       }
+   };
+
+   const form = document.getElementById('contact-form');
+
+   form.addEventListener('submit', function (event) {
+     const formValues = {
+         name: form.elements.name.value,
+         email: form.elements.email.value,
+         message: form.elements.message.value
+     };
+
+     const errors = validate(formValues, constraints);
+
+     if (errors) {
+       event.preventDefault();
+       const errorMessage = Object
+           .values(errors)
+           .map(function (fieldValues) { return fieldValues.join(', ')})
+           .join("\n");
+
+       alert(errorMessage);
+     }
+   }, false);
+</script>
 
 </body>
 
