@@ -33,6 +33,22 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+
+  <script async defer src="https://cdn.simpleanalytics.io/hello.js"></script>
+
+    <!-- CSS Styling -->
+    <style>
+        .visitor-count {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -47,24 +63,22 @@
         <li><a class="nav-link scrollto" href="#resume">Resume</a></li>
         <li><a class="nav-link scrollto" href="#services">Services</a></li>
         <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
-        <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-          <ul>
-            <li><a href="#">Drop Down 1</a></li>
-            <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-              <ul>
-                <li><a href="#">Deep Drop Down 1</a></li>
-                <li><a href="#">Deep Drop Down 2</a></li>
-                <li><a href="#">Deep Drop Down 3</a></li>
-                <li><a href="#">Deep Drop Down 4</a></li>
-                <li><a href="#">Deep Drop Down 5</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Drop Down 2</a></li>
-            <li><a href="#">Drop Down 3</a></li>
-            <li><a href="#">Drop Down 4</a></li>
-          </ul>
-        </li> -->
+        
         <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+
+         <!-- Visitor Count Display -->
+    <div class="visitor-count" id="sa-count">Loading...</div>
+
+    <!-- JavaScript for Dynamic Update -->
+    <script>
+        function updateVisitorCount() {
+            document.getElementById('sa-count').innerText = window.sa_event_count || 'N/A';
+        }
+
+        updateVisitorCount();
+
+        window.addEventListener('saEvent', updateVisitorCount);
+    </script>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
     </nav><!-- .navbar -->
