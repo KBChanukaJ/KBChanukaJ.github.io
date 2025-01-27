@@ -348,15 +348,16 @@ h6 {
 #hero h1 {
   margin: 0 0 10px 0;
   font-size: 64px;
-  font-family: "Satisfy", serif;
+  font-family: "JetBrains Mono";
   color: #fff;
 }
 
 #hero h2 {
   color: #eee;
   margin-bottom: 50px;
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 20px;
+  font-family: "JetBrains Mono";
+  font-weight: bold;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -364,7 +365,7 @@ h6 {
 #hero h3 {
   color: #eee;
   margin-bottom: 50px;
-  font-family: "Satisfy", serif;
+  font-family: "Share Tech Mono";
   font-size: 23px;
   font-weight: 500;
   letter-spacing: 1px;
@@ -629,7 +630,7 @@ section {
 
 .about .skills-content .progress .skill {
   padding: 10px 0;
-  margin: 0 0 6px 0;
+  margin: 0 0 0px 0;
   text-transform: uppercase;
   display: block;
   font-weight: 700;
