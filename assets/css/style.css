@@ -10,7 +10,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "JetBrains Mono";
   color: #444444;
 }
 
@@ -30,7 +30,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: "JetBrains Mono";
 }
 
 /*--------------------------------------------------------------
@@ -117,7 +117,7 @@ h6 {
   white-space: nowrap;
   transition: 0.3s;
   font-size: 12px;
-  font-family: "Raleway", sans-serif;
+  font-family: "JetBrains Mono";
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 1px;
@@ -365,7 +365,7 @@ h6 {
 #hero h3 {
   color: #eee;
   margin-bottom: 50px;
-  font-family: "Share Tech Mono";
+  font-family: "JetBrains Mono";
   font-size: 23px;
   font-weight: 500;
   letter-spacing: 1px;
@@ -592,7 +592,7 @@ section {
 .about .content .count-box p {
   padding: 15px 0 0 0;
   margin: 0 0 0 50px;
-  font-family: "Raleway", sans-serif;
+  font-family: "JetBrains Mono";
   font-size: 14px;
   color: #5d6a75;
 }
@@ -603,7 +603,7 @@ section {
   margin-top: 20px;
   color: #5d6a75;
   font-size: 15px;
-  font-family: "Satisfy", serif;
+  font-family: "JetBrains Mono";
   transition: ease-in-out 0.3s;
 }
 
@@ -634,7 +634,7 @@ section {
   text-transform: uppercase;
   display: block;
   font-weight: 700;
-  font-family: "Raleway", sans-serif;
+  font-family: "JetBrains Mono";
   color: #3b434a;
 }
 
@@ -1066,7 +1066,7 @@ section {
   font-size: 36px;
   color: #ffb727;
   font-weight: 600;
-  font-family: "Open Sans", sans-serif;
+  font-family: "JetBrains Mono";
   margin-bottom: 20px;
 }
 
@@ -1122,7 +1122,7 @@ section {
   transition: none;
   font-size: 14px;
   font-weight: 400;
-  font-family: "Raleway", sans-serif;
+  font-family: "JetBrains Mono";
   font-weight: 600;
   transition: 0.3s;
 }
@@ -1334,7 +1334,7 @@ section {
   font-weight: 700;
   color: #fff;
   position: relative;
-  font-family: "Satisfy", serif;
+  font-family: "JetBrains Mono";
   padding: 0;
   margin: 0 0 15px 0;
 }
