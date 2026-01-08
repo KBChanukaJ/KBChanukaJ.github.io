@@ -38,7 +38,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Set sender and recipient details
         $mail->setFrom('buddhichanuka@gmail.com', 'Personal Website');
-        $mail->addAddress('buddhichanuka@gmail.com'); // Recipient email
+        $mail->addAddress('buddhichanuka@gmail.com'); // Primary recipient (your inbox)
+        $mail->addReplyTo($email ?: 'noreply@example.com', $name ?: 'Website Visitor'); // So you can reply directly
 
         // Email content
         $mail->isHTML(true);
@@ -53,6 +54,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Send email and set session status
         if ($mail->send()) {
+            // Optional: send a short confirmation back to the sender
+            if ($email) {
+                $mail->clearAddresses();
+                $mail->addAddress($email, $name);
+                $mail->Subject = 'We received your message';
+                $mail->Body = "
+                    <p>Hi " . htmlspecialchars($name) . ",</p>
+                    <p>Thanks for reaching out! We received your message and will respond soon.</p>
+                    <hr>
+                    <p><strong>Your message:</strong></p>
+                    <p>" . nl2br($message) . "</p>
+                ";
+                $mail->send();
+            }
+
             $_SESSION['status'] = "Thank you for contacting us. Your message has been sent successfully.";
         } else {
             $_SESSION['status'] = "Sorry, your message could not be sent. Please try again later.";

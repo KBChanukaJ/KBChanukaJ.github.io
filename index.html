@@ -37,6 +37,7 @@
       <ul>
         <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
         <li><a class="nav-link scrollto" href="#about">About</a></li>
+        <li><a class="nav-link scrollto" href="#tools">Tools</a></li>
         <li><a class="nav-link scrollto" href="#education">Education</a></li>
         <li><a class="nav-link scrollto" href="#experience">Experience</a></li>
         <li><a class="nav-link scrollto" href="#services">Services</a></li>
@@ -60,6 +61,11 @@
           </ul>
         </li> -->
         <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        <li>
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode">
+            <i class="bi bi-sun-fill" id="theme-icon"></i>
+          </button>
+        </li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
     </nav>
@@ -67,13 +73,14 @@
   </header>
 
 <section id="hero">
-  <div class="hero-container">
+  <div class="hero-container" id="hero-container">
+    <div id="flashlight-cursor"></div>
     <h1 id="name">Chanuka Jayashan</h1>
     <h2 id="description">
       <span id="i-am">I am</span> <span id="role">FullStack Developer</span>
     </h2>
     <br><br>
-        <a href="./assets/Chanuka .pdf" class="btn-scroll scrollto" title="Scroll Down" target="_blank">
+        <a href="assets/Chanuka.pdf" class="btn-scroll scrollto" title="Download CV" target="_blank" download>
       <i class="bi bi-arrow-down-circle"></i>
     </a>
   </div>
@@ -116,30 +123,25 @@
                 <div class="col-12">
                   <h3 class="resume-title">Summary</h3>
                   <p>
-                    Recent graduate seeking a full-time Software Engineer position. Hands-on experience in building microservices architecture with Java and Spring Boot for high-performance applications. Proficient in developing web applications using Spring Boot, Angular, TypeScript, and MySQL.
+                    Full-Stack Software Engineer with expertise in Java/Spring Boot and frontend development (Angular, TypeScript). Proven ability to build end-to-end solutions for FinTech applications, from scalable backend microservices to responsive UIs. Combines strong OOP, SOLID principles, and SQL optimization with polished frontend skills for seamless system integration.
                   </p>
                 </div>
               </div>
 
               <div class="skills-content">
-                <h3 class="resume-title">Skills</h3>
+                <h3 class="resume-title">Personal Skills</h3>
                 <div class="row">
                   <div class="col-md-6">
                     <ul>
-                      <li><i class="bi bi-check-circle"></i> Java</li>
-                      <li><i class="bi bi-check-circle"></i> Spring Boot</li>
-                      <li><i class="bi bi-check-circle"></i> Angular</li>
-                      <li><i class="bi bi-check-circle"></i> TypeScript</li>
-                      <li><i class="bi bi-check-circle"></i> MicroServices</li>
+                      <li><i class="bi bi-check-circle"></i> Problem solving & critical thinking</li>
+                      <li><i class="bi bi-check-circle"></i> Clear communication (English/Sinhala)</li>
+                      <li><i class="bi bi-check-circle"></i> Collaboration & team leadership</li>
                     </ul>
                   </div>
                   <div class="col-md-6">
                     <ul>
-                      <li><i class="bi bi-check-circle"></i> MySQL</li>
-                      <li><i class="bi bi-check-circle"></i> Python</li>
-                      <li><i class="bi bi-check-circle"></i> HTML & CSS</li>
-                      <li><i class="bi bi-check-circle"></i> REST APIs</li>
-                      <li><i class="bi bi-check-circle"></i> JUnit Unit Testing</li>
+                      <li><i class="bi bi-check-circle"></i> Adaptability & continuous learning</li>
+                      <li><i class="bi bi-check-circle"></i> Ownership, reliability, and delivery focus</li>
                     </ul>
                   </div>
                 </div>
@@ -152,6 +154,49 @@
       </div>
     </section>
     
+
+    <section id="tools" class="skills">
+      <div class="container">
+
+        <div class="section-title">
+          <span>Tools & Technologies</span>
+          <h2>Tools & Technologies</h2>
+          <p>End-to-end stack for building secure, scalable, and polished products.</p>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-cpu"></i></div>
+              <h4>Backend</h4>
+              <p>Java, Spring Boot/Framework, Microservices, RESTful APIs, JUnit.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-window-stack"></i></div>
+              <h4>Frontend</h4>
+              <p>Angular, TypeScript, HTML5/CSS3, Bootstrap, Vue.js, responsive UI.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-database-check"></i></div>
+              <h4>Data</h4>
+              <p>MySQL, Oracle, Azure SQL; indexing, stored procs, query tuning.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-shield-lock"></i></div>
+              <h4>Security & Ops</h4>
+              <p>JWT, RBAC, Git, IntelliJ, API design, CI-friendly testing.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
 
     <section id="education" class="resume">
       <div class="container">
@@ -185,14 +230,14 @@
             <h3 class="resume-title">High Studies</h3>
             <div class="resume-item">
               <h4>BICT (Hons) - Bachelor of Information Communication and Technology</h4>
-              <h5>2020 - Present</h5>
-              <p><em>University of Ruhuna, Sri Lanka. (GPA 3.30   05 Semesters)</em></p>
+              <h5>2020 - 2024</h5>
+              <p><em>University of Ruhuna, Sri Lanka. GPA: 3.20 / 4.00</em></p>
               <p>
               <ul>
-                <li>The BICT (Hons) program is a four-year, professional degree program that provides students with the knowledge and skills necessary to succeed in the rapidly growing field of information and communication technology (ICT).</li>
-                <li>The program covers a wide range of topics, including computer science, software engineering, networking, and web development. </li>
-                <li>Students also gain hands-on experience through industrial training and research projects.</li>
-                <li>Upon graduation, students are well-prepared for careers in a variety of ICT industries, such as software development, web development, networking, and IT support.</li>
+                <li>Four-year professional program covering software engineering, web development, networking, and applied ICT.</li>
+                <li>Emphasis on Java, software architecture, databases, and full-stack web projects.</li>
+                <li>Completed industrial training and research projects to apply theory in real-world settings.</li>
+                <li>Prepared for software engineering roles with strong grounding in OOP, design principles, and system design.</li>
               </ul>
               </p>
             </div>
@@ -212,45 +257,45 @@
         <div class="row">
 
           <div class="col-lg-6">
-            <h3 class="resume-title">FullStack Developer - Internship</h3>
+            <h3 class="resume-title">Associate Software Engineer (FinTech)</h3>
             <div class="resume-item">
-              <h4>Navitsa Technologies Pvt (Ltd) - Colombo, Sri Lanka</h4>
-              <h5>2024 May - Present</h5>
+              <h4>Central Finance PLC - Colombo, Sri Lanka</h4>
+              <h5>Feb 2025 - Present</h5>
               <p><em>Type - Hybrid</em></p>
-              <p><strong>Skills:</strong></p>
               <ul>
-                <li>FullStack Development</li>
-                <li>Spring Boot, Angular</li>
+                <li>Develop and maintain financial software using Angular frontends and Spring Boot microservices with secure RESTful APIs, JWT auth, and RBAC.</li>
+                <li>Optimize Oracle DB performance with stored procedures, triggers, functions, and sequences for double-entry accounting, payments, refunds, and EOD automation.</li>
+                <li>Collaborate across teams to enhance data integrity and reliability while mentoring junior developers on backend best practices.</li>
+                <li>Support UAT/QA cycles to ensure software quality and compliance with business requirements.</li>
               </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <h3 class="resume-title">Intern Software Engineer</h3>
+            <div class="resume-item">
+              <h4>NAVITSA Technologies - Colombo, Sri Lanka</h4>
+              <h5>Jun 2024 - Feb 2025</h5>
+              <p><em>Type - Hybrid</em></p>
               <p><strong>Projects:</strong></p>
               <ul>
                 <li>
                   <strong>MyDent.lk – Web Application for Booking Dental Appointments</strong>
                   <ul>
-                    <li>Developed user-friendly interfaces using Angular, TypeScript, HTML5, and CSS3, improving user interaction and engagement.</li>
-                    <li>Built responsive and dynamic interfaces with Bootstrap and Angular Material, enhancing mobile responsiveness.</li>
-                    <li>Integrated RESTful APIs, reducing data retrieval time and improving overall system performance.</li>
+                    <li>Developed Spring Boot REST APIs for scheduling with JWT authentication and MySQL integration.</li>
+                    <li>Built responsive Angular interfaces with TypeScript and Bootstrap for seamless booking experiences.</li>
+                    <li>Designed efficient API contracts between backend and frontend to reduce payloads and latency.</li>
                   </ul>
                 </li>
                 <li>
                   <strong>Ledger Chimp – Financial Management Platform</strong>
                   <ul>
-                    <li>Built scalable APIs and microservices using Java and Spring Boot, optimizing system performance during high transaction volumes.</li>
-                    <li>Developed user-friendly interfaces with Angular, improving user retention and overall experience.</li>
-                    <li>Optimized Azure SQL Server and MySQL Flexible Server databases, reducing query processing times.</li>
-                    <li>Conducted unit testing to ensure code quality, achieving high test coverage and reliability.</li>
+                    <li>Developed scalable APIs and microservices using Java/Spring Boot for high-volume transactions.</li>
+                    <li>Implemented SOLID-aligned RESTful APIs and optimized Azure SQL Server/MySQL with indexing and stored procedures to cut query latency.</li>
+                    <li>Delivered Angular frontends and JUnit tests (80% coverage) to improve reliability and user experience.</li>
                   </ul>
                 </li>
               </ul>
-            </div>
-          </div>
-          
-          <div class="col-lg-6">
-            <h3 class="resume-title">Banker</h3>
-            <div class="resume-item">
-              <h4>Professional Experience</h4>
-              <h5>2019 - 2020</h5>
-              <p><em>People's Bank Gangodavila</em></p>
             </div>
           </div>
         </div>
@@ -459,7 +504,7 @@
         <div class="section-title">
           <span>Contact Me</span>
           <h2>Contact Me</h2>
-          <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+          <p>Let's connect and discuss how we can work together. I'm always open to new opportunities and collaborations!</p>
         </div>
 
         <div class="row">
@@ -553,6 +598,36 @@
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+  <!-- Chatbot Widget -->
+  <div id="chatbot-container">
+    <div id="chatbot-window" class="chatbot-hidden">
+      <div class="chatbot-header">
+        <h4>Ask Me Anything</h4>
+        <button id="chatbot-close" class="chatbot-close-btn">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+      <div id="chatbot-messages" class="chatbot-messages">
+        <div class="chatbot-message bot-message">
+          <div class="message-content">
+            <p>Hello! 👋 I'm here to help you learn about Chanuka. Ask me about:</p>
+            <p>• Personal info (name, contact, location)<br>• Skills & technologies<br>• Work experience<br>• Education & qualifications<br>• Projects & portfolio<br>• Certifications & achievements<br>• Services & availability<br>• References</p>
+            <p>What would you like to know?</p>
+          </div>
+        </div>
+      </div>
+      <div class="chatbot-input-container">
+        <input type="text" id="chatbot-input" placeholder="Type your question here..." autocomplete="off">
+        <button id="chatbot-send" class="chatbot-send-btn">
+          <i class="bi bi-send-fill"></i>
+        </button>
+      </div>
+    </div>
+    <button id="chatbot-toggle" class="chatbot-toggle-btn">
+      <i class="bi bi-chat-dots-fill"></i>
+    </button>
+  </div>
+
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
@@ -616,6 +691,410 @@ window.onload = function() {
   moveIam();
   setInterval(moveIam, 4000); 
 };
+
+// Dark Mode Toggle and Flashlight Cursor
+(function() {
+  const themeToggle = document.getElementById('theme-toggle');
+  const themeIcon = document.getElementById('theme-icon');
+  const body = document.body;
+  const heroSection = document.getElementById('hero');
+  const heroContainer = document.getElementById('hero-container');
+  const flashlightCursor = document.getElementById('flashlight-cursor');
+  
+  // Check for saved theme preference or default to light mode
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    body.classList.add('dark-mode');
+    themeIcon.classList.remove('bi-sun-fill');
+    themeIcon.classList.add('bi-moon-fill');
+  }
+  
+  // Toggle theme
+  themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    const isDarkMode = body.classList.contains('dark-mode');
+    
+    if (isDarkMode) {
+      themeIcon.classList.remove('bi-sun-fill');
+      themeIcon.classList.add('bi-moon-fill');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      themeIcon.classList.remove('bi-moon-fill');
+      themeIcon.classList.add('bi-sun-fill');
+      localStorage.setItem('theme', 'light');
+    }
+  });
+  
+  // Advanced Flashlight cursor effect (only in dark mode and hero section)
+  let isInHero = false;
+  let mouseX = 0;
+  let mouseY = 0;
+  let cursorX = 0;
+  let cursorY = 0;
+  
+  function updateFlashlight(e) {
+    if (!body.classList.contains('dark-mode') || !isInHero) {
+      flashlightCursor.style.display = 'none';
+      return;
+    }
+    
+    const rect = heroContainer.getBoundingClientRect();
+    mouseX = e.clientX - rect.left;
+    mouseY = e.clientY - rect.top;
+  }
+  
+  // Smooth animation using requestAnimationFrame
+  function animateFlashlight() {
+    if (body.classList.contains('dark-mode') && isInHero) {
+      // Smooth interpolation for fluid movement
+      cursorX += (mouseX - cursorX) * 0.15;
+      cursorY += (mouseY - cursorY) * 0.15;
+      
+      flashlightCursor.style.display = 'block';
+      flashlightCursor.style.left = cursorX + 'px';
+      flashlightCursor.style.top = cursorY + 'px';
+    } else {
+      flashlightCursor.style.display = 'none';
+    }
+    
+    requestAnimationFrame(animateFlashlight);
+  }
+  
+  // Start animation loop
+  animateFlashlight();
+  
+  // Track mouse movement
+  heroSection.addEventListener('mousemove', updateFlashlight);
+  
+  // Track when mouse enters/exits hero section
+  heroSection.addEventListener('mouseenter', () => {
+    isInHero = true;
+    if (body.classList.contains('dark-mode')) {
+      flashlightCursor.style.display = 'block';
+    }
+  });
+  
+  heroSection.addEventListener('mouseleave', () => {
+    isInHero = false;
+    flashlightCursor.style.display = 'none';
+  });
+})();
+
+// Chatbot Functionality
+(function() {
+  const chatbotToggle = document.getElementById('chatbot-toggle');
+  const chatbotWindow = document.getElementById('chatbot-window');
+  const chatbotClose = document.getElementById('chatbot-close');
+  const chatbotInput = document.getElementById('chatbot-input');
+  const chatbotSend = document.getElementById('chatbot-send');
+  const chatbotMessages = document.getElementById('chatbot-messages');
+
+  // Knowledge base
+  const knowledgeBase = {
+    name: "My name is Kanaththage Buddhi Chanuka Jayashan, but I go by Chanuka Jayashan.",
+    email: "You can reach me at buddhichanuka@gmail.com",
+    phone: "My phone number is +94 77 913 4741",
+    location: "I'm from Colombo, Sri Lanka. My address is 66/A/1 Brahmanagama Pannipitiya, Sri Lanka.",
+    age: "I'm 24 years old.",
+    github: "My GitHub username is KBChanukaJ. You can find my projects there!",
+    linkedin: "You can find me on LinkedIn at linkedin.com/in/buddhi-chanuka-jayashan-b0aa57194/",
+    summary: "I'm a Full-Stack Software Engineer with expertise in Java/Spring Boot and frontend development (Angular, TypeScript). I build end-to-end solutions for FinTech applications, from scalable backend microservices to responsive UIs. I combine strong OOP, SOLID principles, and SQL optimization with polished frontend skills.",
+    skills: {
+      backend: "Backend: Spring Boot, Spring Framework, JUnit, Microservices, Java",
+      frontend: "Frontend: Angular, TypeScript, HTML5/CSS3, Bootstrap, Vue.js",
+      database: "Databases: MySQL, Oracle DB",
+      principles: "I follow OOP & Design Principles: SOLID, Design Patterns",
+      tools: "Tools: RESTful APIs, Git, IntelliJ, JWT & RBAC security"
+    },
+    experience: {
+      current: "I'm currently working as an Associate Software Engineer (FinTech) at Central Finance PLC since February 2025. I develop and maintain financial software using Angular and Spring Boot, optimize Oracle DB performance, and collaborate with teams to enhance system reliability.",
+      currentDetails: "At Central Finance PLC, I:\n• Develop and maintain financial software using Angular (Frontend) and Spring Boot (Backend)\n• Implement secure RESTful APIs for high-volume transaction processing with microservices architecture\n• Use JWT-based authentication and role-based access control (RBAC) to protect sensitive financial data\n• Optimize Oracle DB using stored procedures, triggers, functions, and sequences\n• Handle complex financial transactions including double-entry accounting, payment processing, refund workflows, and End-of-Day (EOD) automation\n• Collaborate with cross-functional teams to enhance data integrity and system reliability\n• Mentor junior developers on backend best practices\n• Support UAT and QA testing processes",
+      previous: "Previously, I worked as an Intern Software Engineer at NAVITSA Technologies from June 2024 to February 2025. I worked on projects like MyDent.lk (dental appointment booking) and Ledger Chimp (financial management platform).",
+      previousDetails: "At NAVITSA Technologies, I worked on:\n\n1. MyDent.lk – Web Application for Booking Dental Appointments:\n• Developed Spring Boot REST APIs for appointment scheduling\n• Implemented JWT authentication and MySQL database integration\n• Built Angular frontend with TypeScript and Bootstrap\n• Created responsive interfaces for seamless booking experiences\n• Designed efficient API contracts between backend and frontend\n\n2. Ledger Chimp – Financial Management Platform:\n• Developed scalable APIs and microservices using Java/Spring Boot\n• Handled high-volume transactions with optimized performance\n• Designed RESTful APIs following SOLID principles\n• Optimized Azure SQL Server and MySQL databases\n• Reduced query latency through indexing and stored procedures\n• Implemented unit testing with JUnit, achieving 80% test coverage\n• Built Angular frontends for improved user experience"
+    },
+    education: {
+      university: "I graduated from University of Ruhuna, Sri Lanka with a BICT (Hons) - Bachelor of Information & Communication Technology. My GPA was 3.20/4.00 (2020-2024).",
+      universityDetails: "University of Ruhuna, Sri Lanka (2020-2024)\nDegree: BICT (Hons) - Bachelor of Information & Communication Technology\nGPA: 3.20/4.00\n\nThe BICT program is a four-year professional degree covering computer science, software engineering, networking, and web development. I gained hands-on experience through industrial training and research projects.",
+      alevel: "I completed my GCE Advanced Level at Lumbini College, Colombo 05 in 2018 with Technology Stream (SFT - B, ET - B, ICT - C). Z-Score: 1.487.",
+      olevel: "I completed my GCE Ordinary Level at WP/Ho/Homagama Maha Vidyalaya in 2015 with 5 A grades, 2 B grades, 1 C grade, and 1 S grade."
+    },
+    projects: {
+      inventory: "Web-based Inventory Management System - Built with Spring Boot, Angular, and MySQL. Improved tracking accuracy and efficiency with real-time data updates.",
+      inventoryDetails: "Web-based Inventory Management System (2023, University of Ruhuna)\nTechnologies: Spring Boot, Angular, MySQL\n• Built a comprehensive system for managing inventory\n• Improved tracking accuracy and efficiency\n• Integrated real-time data updates\n• Streamlined inventory checks and minimized stockouts\nGitHub: KBChanukaJ/Inventory-Management",
+      hostel: "Hostel Complaint Management System - Developed with Spring Boot, Angular, and Advanced Database Technologies. Improved response times and implemented automated notifications.",
+      hostelDetails: "Hostel Complaint Management System (2023, University of Ruhuna)\nTechnologies: Spring Boot, Angular, Advanced Database Technologies\n• Developed a complaint tracking system\n• Improved response times and issue resolution\n• Implemented automated notification system for better communication\n• Enhanced overall efficiency\nGitHub: KBChanukaJ/Hostal_Management",
+      theorem: "Automated Theorem Proving for Congruence of Triangle - Used Google Cloud Vision API, Roboflow, OpenCV, and Regular Expression to extract geometric data from images and suggest correct theorems.",
+      theoremDetails: "Automated Theorem Proving for Congruence of Triangle (2023, University of Ruhuna)\nTechnologies: Google Cloud Vision API, Roboflow, OpenCV, Regular Expression, Custom Algorithms\n• Built a web-based tool that extracts geometric data from images\n• Used Google Cloud Vision API and Roboflow for image processing\n• Applied OpenCV to identify shapes\n• Used Regular Expression for extracting and analyzing text from images\n• Suggested correct theorems based on extracted data\n• Streamlined verification process and enhanced accuracy"
+    },
+    certifications: "I have certifications in Introduction to Cybersecurity from CISCO Network Academy (2022) and Python for Beginners from University of Moratuwa (2024).",
+    certificationsDetails: "My certifications include:\n\n1. Introduction to Cybersecurity - CISCO Network Academy (2022)\n2. Python for Beginners - University of Moratuwa (2024)",
+    languages: "I speak English (Intermediate) and Sinhala (Mother tongue).",
+    achievements: "I participated in INSURGEX 1.0 at the Faculty of Science, University of Ruhuna in 2024. I also served as Junior Treasurer for the ICT Society (2023-2024) and Committee Member (2022-2023). Additionally, I was a Team Member of the Faculty Badminton team (2022-2024).",
+    references: "References:\n\n1. Mr. Udith Indrachapa\n   Software Engineer, IFS R&D International (Pvt) Ltd\n   Phone: +94 77 511 1651\n   Email: udith.indrachapa@ifs.com\n\n2. Mr. Harindu De Silva\n   Senior Software Engineer, Rootcode\n   Phone: +94 70 296 4405\n   Email: harindu.desilva@rootcode.io",
+    services: "I offer the following services:\n• Web Application Development (Spring Boot & Angular)\n• Front-End Development (Angular, TypeScript, HTML, CSS, Bootstrap)\n• Backend Development (Spring Boot, Java, Microservices)\n• Computer Science Assignment Help",
+    hobbies: "I enjoy playing badminton and was part of the Faculty Badminton team at University of Ruhuna (2022-2024). I'm also actively involved in ICT Society activities.",
+    availability: "I'm currently working full-time at Central Finance PLC. For freelance projects or consulting, please contact me via email at buddhichanuka@gmail.com.",
+    whyHire: "I bring a unique combination of:\n• Full-stack expertise (Backend + Frontend)\n• FinTech domain experience\n• Strong foundation in OOP, SOLID principles, and design patterns\n• Database optimization skills (MySQL, Oracle)\n• Security implementation (JWT, RBAC)\n• Microservices architecture experience\n• Testing and quality assurance focus\n• Mentoring and collaboration skills"
+  };
+
+  // Response patterns
+  const patterns = [
+    {
+      keywords: ['name', 'who are you', 'your name', 'what is your name'],
+      response: knowledgeBase.name
+    },
+    {
+      keywords: ['email', 'contact email', 'mail', 'e-mail', 'email address'],
+      response: knowledgeBase.email
+    },
+    {
+      keywords: ['phone', 'number', 'contact', 'call', 'mobile', 'telephone'],
+      response: knowledgeBase.phone
+    },
+    {
+      keywords: ['location', 'address', 'where', 'city', 'colombo', 'sri lanka', 'live', 'reside'],
+      response: knowledgeBase.location
+    },
+    {
+      keywords: ['age', 'old', 'how old'],
+      response: knowledgeBase.age
+    },
+    {
+      keywords: ['github', 'repository', 'repos', 'git', 'code'],
+      response: knowledgeBase.github
+    },
+    {
+      keywords: ['linkedin', 'linked in', 'professional', 'network'],
+      response: knowledgeBase.linkedin
+    },
+    {
+      keywords: ['summary', 'about', 'tell me about', 'introduce', 'who is', 'overview'],
+      response: knowledgeBase.summary
+    },
+    {
+      keywords: ['skill', 'technology', 'tech', 'what can you do', 'expertise', 'proficient', 'technologies', 'stack'],
+      response: `My skills include:\n• ${knowledgeBase.skills.backend}\n• ${knowledgeBase.skills.frontend}\n• ${knowledgeBase.skills.database}\n• ${knowledgeBase.skills.principles}\n• ${knowledgeBase.skills.tools}`
+    },
+    {
+      keywords: ['backend', 'server', 'api', 'spring boot', 'java', 'microservices'],
+      response: `${knowledgeBase.skills.backend}\n\nI specialize in building scalable backend systems using Spring Boot, implementing RESTful APIs, and working with microservices architecture. I also have experience with JUnit for testing.`
+    },
+    {
+      keywords: ['frontend', 'angular', 'typescript', 'ui', 'interface', 'user interface'],
+      response: `${knowledgeBase.skills.frontend}\n\nI create responsive and dynamic user interfaces using Angular and TypeScript, with expertise in HTML5, CSS3, and Bootstrap for styling. I also have experience with Vue.js.`
+    },
+    {
+      keywords: ['database', 'mysql', 'oracle', 'sql', 'db'],
+      response: `${knowledgeBase.skills.database}\n\nI work with both MySQL and Oracle databases, optimizing queries, creating stored procedures, triggers, functions, and sequences for better performance.`
+    },
+    {
+      keywords: ['experience', 'work', 'job', 'current', 'employer', 'company', 'position', 'role'],
+      response: knowledgeBase.experience.current
+    },
+    {
+      keywords: ['current job', 'current work', 'central finance', 'what do you do', 'responsibilities', 'duties'],
+      response: knowledgeBase.experience.currentDetails
+    },
+    {
+      keywords: ['previous', 'intern', 'navitsa', 'past', 'internship', 'previous job'],
+      response: knowledgeBase.experience.previous
+    },
+    {
+      keywords: ['navitsa projects', 'internship projects', 'mydent', 'ledger chimp', 'what did you do'],
+      response: knowledgeBase.experience.previousDetails
+    },
+    {
+      keywords: ['education', 'degree', 'university', 'graduate', 'gpa', 'bict', 'studied', 'qualification'],
+      response: `${knowledgeBase.education.university}\n\n${knowledgeBase.education.alevel}`
+    },
+    {
+      keywords: ['university details', 'university of ruhuna', 'bict program', 'degree details'],
+      response: knowledgeBase.education.universityDetails
+    },
+    {
+      keywords: ['a level', 'alevel', 'advanced level', 'lumbini', 'z-score'],
+      response: knowledgeBase.education.alevel
+    },
+    {
+      keywords: ['o level', 'olevel', 'ordinary level', 'ol exam'],
+      response: knowledgeBase.education.olevel
+    },
+    {
+      keywords: ['project', 'portfolio', 'built', 'developed', 'projects', 'work on'],
+      response: `Some of my key projects:\n\n1. ${knowledgeBase.projects.inventory}\n\n2. ${knowledgeBase.projects.hostel}\n\n3. ${knowledgeBase.projects.theorem}`
+    },
+    {
+      keywords: ['inventory', 'inventory management', 'inventory system'],
+      response: knowledgeBase.projects.inventoryDetails
+    },
+    {
+      keywords: ['hostel', 'hostel management', 'complaint', 'complaint system'],
+      response: knowledgeBase.projects.hostelDetails
+    },
+    {
+      keywords: ['theorem', 'triangle', 'opencv', 'image processing', 'geometric'],
+      response: knowledgeBase.projects.theoremDetails
+    },
+    {
+      keywords: ['certification', 'certificate', 'certified', 'certifications'],
+      response: knowledgeBase.certifications
+    },
+    {
+      keywords: ['certification details', 'what certifications', 'cybersecurity', 'python'],
+      response: knowledgeBase.certificationsDetails
+    },
+    {
+      keywords: ['language', 'speak', 'english', 'sinhala', 'languages'],
+      response: knowledgeBase.languages
+    },
+    {
+      keywords: ['achievement', 'achievements', 'awards', 'recognition', 'society', 'badminton'],
+      response: knowledgeBase.achievements
+    },
+    {
+      keywords: ['reference', 'references', 'recommendation', 'recommendations', 'contact person'],
+      response: knowledgeBase.references
+    },
+    {
+      keywords: ['service', 'services', 'what do you offer', 'hire', 'freelance', 'fiverr'],
+      response: knowledgeBase.services
+    },
+    {
+      keywords: ['hobby', 'hobbies', 'interest', 'interests', 'badminton', 'sports'],
+      response: knowledgeBase.hobbies
+    },
+    {
+      keywords: ['available', 'availability', 'hire', 'freelance', 'consulting', 'when available'],
+      response: knowledgeBase.availability
+    },
+    {
+      keywords: ['why hire', 'why should i hire', 'what makes you different', 'strengths', 'advantages'],
+      response: knowledgeBase.whyHire
+    },
+    {
+      keywords: ['fintech', 'financial', 'finance', 'banking'],
+      response: "I have extensive experience in FinTech development. At Central Finance PLC, I work on financial software handling high-volume transactions, double-entry accounting, payment processing, refund workflows, and End-of-Day automation. I ensure security with JWT authentication and RBAC."
+    },
+    {
+      keywords: ['security', 'jwt', 'rbac', 'authentication', 'authorization'],
+      response: "I implement JWT-based authentication and role-based access control (RBAC) to protect sensitive financial data. I ensure secure RESTful APIs and follow security best practices in all my applications."
+    },
+    {
+      keywords: ['testing', 'junit', 'test', 'quality', 'qa', 'coverage'],
+      response: "I implement unit testing with JUnit and have achieved 80% test coverage in my projects. I also support UAT and QA testing processes to ensure software quality and compliance with business requirements."
+    },
+    {
+      keywords: ['mentor', 'mentoring', 'teach', 'junior', 'team'],
+      response: "I mentor junior developers on backend best practices and collaborate with cross-functional teams to enhance data integrity and system reliability. I believe in knowledge sharing and team growth."
+    },
+    {
+      keywords: ['gpa', 'grade', 'grades', 'academic'],
+      response: "My university GPA is 3.20/4.00. I completed my BICT (Hons) degree from University of Ruhuna. In A-Levels, I achieved Technology Stream with SFT - B, ET - B, ICT - C, with a Z-Score of 1.487."
+    },
+    {
+      keywords: ['cv', 'resume', 'download', 'pdf'],
+      response: "You can download my CV from the hero section of this website. Click the download button or scroll to the top and look for the CV download link."
+    },
+    {
+      keywords: ['help', 'what can you tell', 'what do you know', 'questions'],
+      response: "I can tell you about:\n• Personal information (name, contact, location)\n• Skills and technologies\n• Work experience (current and previous)\n• Education and qualifications\n• Projects and portfolio\n• Certifications\n• Achievements and activities\n• Services offered\n• References\n\nJust ask me anything!"
+    }
+  ];
+
+  // Get response function
+  function getResponse(userMessage) {
+    const lowerMessage = userMessage.toLowerCase().trim();
+    
+    // Check for greeting
+    if (lowerMessage.match(/^(hi|hello|hey|greetings|good morning|good afternoon|good evening)/)) {
+      return "Hello! 👋 How can I help you learn about Chanuka today?";
+    }
+    
+    // Check for thanks/bye
+    if (lowerMessage.match(/^(thanks|thank you|bye|goodbye|see you|ttyl)/)) {
+      return "You're welcome! Feel free to ask if you need anything else. Have a great day! 😊";
+    }
+    
+    // Check patterns
+    for (const pattern of patterns) {
+      for (const keyword of pattern.keywords) {
+        if (lowerMessage.includes(keyword)) {
+          return pattern.response;
+        }
+      }
+    }
+    
+    // Default response with suggestions
+    const suggestions = [
+      "Try asking about my skills, experience, education, projects, or contact information.",
+      "I can tell you about my work at Central Finance PLC, my projects, or my technical skills.",
+      "Ask me about my name, email, phone, location, GitHub, or any other details!",
+      "I know about my experience, education, certifications, projects, and more. What would you like to know?"
+    ];
+    const randomSuggestion = suggestions[Math.floor(Math.random() * suggestions.length)];
+    return `I'm not sure about that. ${randomSuggestion} What would you like to know?`;
+  }
+
+  // Add message to chat
+  function addMessage(message, isUser = false) {
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `chatbot-message ${isUser ? 'user-message' : 'bot-message'}`;
+    
+    const contentDiv = document.createElement('div');
+    contentDiv.className = 'message-content';
+    
+    const p = document.createElement('p');
+    p.textContent = message;
+    contentDiv.appendChild(p);
+    
+    messageDiv.appendChild(contentDiv);
+    chatbotMessages.appendChild(messageDiv);
+    
+    // Scroll to bottom
+    chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+  }
+
+  // Send message
+  function sendMessage() {
+    const userMessage = chatbotInput.value.trim();
+    if (!userMessage) return;
+    
+    // Add user message
+    addMessage(userMessage, true);
+    chatbotInput.value = '';
+    
+    // Simulate typing delay
+    setTimeout(() => {
+      const response = getResponse(userMessage);
+      addMessage(response, false);
+    }, 500);
+  }
+
+  // Toggle chatbot
+  chatbotToggle.addEventListener('click', () => {
+    chatbotWindow.classList.toggle('chatbot-hidden');
+    chatbotToggle.classList.toggle('active');
+    if (!chatbotWindow.classList.contains('chatbot-hidden')) {
+      chatbotInput.focus();
+    }
+  });
+
+  // Close chatbot
+  chatbotClose.addEventListener('click', () => {
+    chatbotWindow.classList.add('chatbot-hidden');
+    chatbotToggle.classList.remove('active');
+  });
+
+  // Send button click
+  chatbotSend.addEventListener('click', sendMessage);
+
+  // Enter key press
+  chatbotInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      sendMessage();
+    }
+  });
+})();
 
 </script>
 
